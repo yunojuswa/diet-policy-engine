@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diet Policy Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Diet policy checker</h1>
+    <p>Enter a day's meals, pick the policy that applies to the patient, and see which rules the plan breaks.</p>
+  </header>
+
+  <main>
+    <section class="panel" aria-labelledby="plan-h">
+      <h2 id="plan-h">Meal plan</h2>
+      <div class="row">
+        <label for="policy">Policy</label>
+        <select id="policy"></select>
+      </div>
+      <details class="rules" id="rules"><summary>Rules in this policy</summary><ul id="rule-list"></ul></details>
+
+      <div id="meals"></div>
+
+      <div class="actions">
+        <button id="validate" class="primary" type="button">Check compliance</button>
+        <button id="sample-good" type="button">Load compliant sample</button>
+        <button id="sample-bad" type="button">Load non-compliant sample</button>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="res-h" aria-live="polite">
+      <h2 id="res-h">Result</h2>
+      <div id="result"><p class="muted">No result yet. Load a sample or enter foods, then check compliance.</p></div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
